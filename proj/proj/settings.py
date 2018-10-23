@@ -31,7 +31,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'reglog',
     'market',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -121,3 +120,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = ('./static',)
+MEDIA_ROOT  = os.path.join(BASE_DIR, 'posts')
+MEDIA_URL = '/posts/'

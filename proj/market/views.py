@@ -5,6 +5,14 @@ from django.shortcuts import render, redirect, HttpResponse
 from django.contrib.auth.models import User
 # Create your views here.
 
+def index(request):
+
+    posts = Post.objects.all()
+    response={}
+    response['posts']=posts
+    return render(request, 'market/index.html', response)
+
+
 def stuff(request):
 
     posts = Post.objects.all()
